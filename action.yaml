@@ -4,4 +4,4 @@ author: 'cabr2 team'
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://a6543/cabr2_ci:latest'
