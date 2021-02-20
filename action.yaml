@@ -1,0 +1,7 @@
+name: 'cabr2_ci'
+description: 'Run cabr2 things'
+author: 'cabr2 team'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
