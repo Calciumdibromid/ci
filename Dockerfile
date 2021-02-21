@@ -16,4 +16,4 @@ RUN rm /tmp/wkhtmltox_amd64.deb
 
 # install rust toolchain
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --profile complete -t stable
-ENV PATH="/root/.cargo/bin:${PATH}"
+RUN ln -s /root/.cargo/bin/* /usr/local/bin/
