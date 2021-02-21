@@ -16,7 +16,7 @@ RUN rm /tmp/wkhtmltox_amd64.deb
 
 # install rust toolchain
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --profile complete -t stable
-RUN ln -s /root/.cargo/bin/* /usr/local/bin/
+ENV PATH="/root/.cargo/bin:${PATH}"
 
 # install node14
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt update && apt install -y yarn nodejs
