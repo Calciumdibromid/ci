@@ -7,7 +7,7 @@ RUN apt install tzdata -y --quiet
 RUN apt install keyboard-configuration -y --quiet
 
 # install build dependencys
-RUN apt install -y --quiet webkit2gtk-4.0 libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev wkhtmltopdf xfonts-base xfonts-75dpi
+RUN apt install -y --quiet libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev wkhtmltopdf xfonts-base xfonts-75dpi
 
 # install rust toolchain
 RUN apt install -y cargo
