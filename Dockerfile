@@ -14,9 +14,10 @@ RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkh
 RUN dpkg -i /tmp/wkhtmltox_amd64.deb
 RUN rm /tmp/wkhtmltox_amd64.deb
 
-# install rust toolchain
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --profile complete -t stable
-ENV PATH="/root/.cargo/bin:${PATH}"
-
 # install node14
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt update && apt install -y yarn nodejs
+
+# install rust toolchain
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --component clippy rustfmt
+ENV PATH="/root/.cargo/bin:${PATH}"
+
